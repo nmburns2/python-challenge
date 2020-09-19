@@ -12,15 +12,14 @@ li = []
 otooley = []
 
 with open (path) as csvfile:
-     reader = csv.reader(csvfile, delimiter= ',', lineterminator = '/n')
+     reader = csv.reader(csvfile, delimiter= ',')
      for x in reader:
         votes.append((x[0]))
-        county.append((x[1]))
         candidates.append((x[2]))
 
 total = (len(votes))
 
-print(total)
+print(f"Total Votes: {total}")
 print("-----------------")
 
 for y in candidates:
@@ -38,11 +37,12 @@ otooleys_votes = len(otooley)
 lis_votes = len(li)
 correys_votes = len (correy)
 
-print(khans_votes)
+print(f"Khan's Votes: {khans_votes}")
 print("-----------------")
-print(lis_votes)
+print(f"O'Tooley's Votes: {otooleys_votes}")
 print("-----------------")
-print (otooleys_votes)
+print(f"Li's Votes: {lis_votes}")
 print("-----------------")
-print(correys_votes)
+print(f"Correy's Votes: {correys_votes}")
+
 
