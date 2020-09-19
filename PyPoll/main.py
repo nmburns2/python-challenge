@@ -63,6 +63,24 @@ print("-----------------------")
 print(f'Winner: {winner}')
 print("_______________________")
 
+out = os.path.join("Analysis", "Election_Analysis.txt")
+
+with open (out, 'w') as txt:
+   txt.write("_______________________")
+   txt.write("Election Results:")
+   txt.write("-----------------------")
+   txt.write(f"Total Votes: {total}")
+   txt.write("-----------------------") 
+   txt.write(f"Khan's Votes: {khans_votes}, {khans_percent}%")
+   txt.write(f"O'Tooley's Votes: {otooleys_votes}, {otooleys_percent}%")
+   txt.write(f"Li's Votes: {lis_votes}, {lis_percent}%")
+   txt.write(f"Correy's Votes: {correys_votes}, {correys_percent}%")
+   txt.write("-----------------------")
+   txt.write(f'Winner: {winner}')
+   txt.write("_______________________")
+
+
+
 
 
 

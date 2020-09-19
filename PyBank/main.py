@@ -29,3 +29,12 @@ greatest_decrease = min(revenue)
 
 print(f'Greatest Increase: {greatest_increase}')
 print(f"Greatest Decrease: {greatest_decrease}")
+
+out = os.path.join('Analysis', 'Bank_Analysis')
+
+with open (out, 'w') as txt:
+    txt.write(f"Total months: {total_months}")
+    txt.write(f'Total Revenue: {total_revenue}')
+    txt.write(f'Average Change: {avg_change}')
+    txt.write(f'Greatest Increase: {greatest_increase}')
+    txt.write(f"Greatest Decrease: {greatest_decrease}")
