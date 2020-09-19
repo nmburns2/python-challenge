@@ -21,21 +21,31 @@ with open(csv_path) as csvfile:
 
 # calculate total months
 total_months = len(month)
-print(f"Total months: {total_months}")
 
+# print results
+print("_________________")
+print(f"Total months: {total_months}")
+print('-----------------')
 # calculate total revenue
 total_revenue = (total_revenue + int(x[1]))
+
+# print results
 print(f'Total Revenue: {total_revenue}')
 
 # calculate average change
 avg_change = (total_revenue / total_months)
+
+# print results
 print(f'Average Change: {avg_change}')
 
 # calculate increases
 greatest_increase = max(revenue)
 greatest_decrease = min(revenue)
+
+# print results
 print(f'Greatest Increase: {greatest_increase}')
 print(f"Greatest Decrease: {greatest_decrease}")
+print("_________________")
 
 # set path
 out = os.path.join('Analysis', 'Bank_Analysis')

@@ -23,6 +23,7 @@ with open (path) as csvfile:
 # calculate total votes
 total = (len(votes))
 
+# print results
 print("_______________________")
 print("Election Results:")
 print("-----------------------")
@@ -40,6 +41,7 @@ for y in candidates:
     if y == 'Correy':
         correy.append(candidates)
 
+
 khans_votes = len(khan)
 otooleys_votes = len(otooley)
 lis_votes = len(li)
@@ -51,6 +53,7 @@ otooleys_percent = ((otooleys_votes/total) * 100)
 lis_percent = ((lis_votes/total) * 100)
 correys_percent = ((correys_votes/total) * 100)
 
+# print results
 print(f"Khan's Votes: {khans_votes}, {khans_percent}%")
 print(f"O'Tooley's Votes: {otooleys_votes}, {otooleys_percent}%")
 print(f"Li's Votes: {lis_votes}, {lis_percent}%")
@@ -66,7 +69,7 @@ if otooleys_votes > max(khans_votes, correys_votes, lis_votes):
 if correys_votes > max(khans_votes, otooleys_votes, lis_votes):
     winner = "Correy"
 
-
+# print results
 print("-----------------------")
 print(f'Winner: {winner}')
 print("_______________________")
