@@ -1,11 +1,8 @@
 import csv
 import os
 
-csv_path = os.path.join('Resources', 'election_data.csv')
-
-with open(csv_path) as csvfile:
-    csvreader = csv.reader(csvfile, delimiter= ',')
-
+path = os.path.join('Resources', 'election_data.csv')
+   
 votes = []
 county = []
 candidates = []
@@ -14,10 +11,12 @@ correy = []
 li = []
 otooley = []
 
-for x in csvreader:
-    votes.append(int(x[0]))
-    county.append(int(x[1]))
-    candidates.append(int(x[2]))
+with open (path) as csvfile:
+     reader = csv.reader(csvfile, delimiter= ',', lineterminator = '/n')
+     for x in reader:
+        votes.append((x[0]))
+        county.append((x[1]))
+        candidates.append((x[2]))
 
 total = (len(votes))
 
